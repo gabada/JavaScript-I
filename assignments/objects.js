@@ -30,7 +30,10 @@ const interns = [
 	"id": 2,
 	"email": "kdiben1@tinypic.com",
 	"first name": "Kennan",
-	"gender": "M"
+	"gender": "M",
+	"speak": function() {
+		return `Hello, my name is Kennan!`;
+		}
 	},
 	{
 	"id": 3,
@@ -48,7 +51,10 @@ const interns = [
 	"id": 5,
 	"email": "adaine5@samsung.com",
 	"first name": "Antonietta",
-	"gender": "F"
+	"gender": "F",
+	"multiplyNums": function(num1, num2) {
+		return num1 * num2;
+	}
 	}
 ]
 
