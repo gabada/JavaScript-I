@@ -93,16 +93,42 @@ console.log(interns[1+3].gender);
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+		Name: "Susan",
+		Age: 70,
+		speak: function() {
+			console.log(`My name is ${this.Name}`)
+		},
+		child: {
+			Name: "George",
+			Age: 50,
+			speak: function() {
+			console.log(`My name is ${this.Name}`)
+			},
+			grandchild: {
+				Name: "Sam",
+				Age: 30,
+				speak: function() {
+			console.log(`My name is ${this.Name}`)
+				}
+			}
+		}
+	}
 
 // Log the parent object's name
+console.log(Object.values(parent)[0]);
 
 // Log the child's age
+console.log(Object.values(parent)[3].Age);
 
 // Log the name and age of the grandchild
+console.log(Object.values(parent)[3]["grandchild"].Name, Object.values(parent)[3]["grandchild"].Age);
 
 // Have the parent speak
+console.log(parent.speak());
 
 // Have the child speak
+console.log(parent.child.speak());
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
